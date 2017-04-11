@@ -1,0 +1,13 @@
+<ul>
+  <% @businesses.each do |business| %>
+    <h3><%= link_to business.name, business_path(business) %></h3>
+    <li>Address: <%= business.address%></li>
+    <li>City: <%= business.city.name %></li>
+    <li>Zipcode: <%= business.zipcode %></li>
+    <li>Description: <%= business.description %></li>
+    <li>Phone: <%= business.phone %></li>
+    <li>Website: <%= business.website %></li>
+    <li>Category: <%= business.category.name %></li>
+    <%= image_tag business.image_url %>
+  <% end %>
+</ul>
