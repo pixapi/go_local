@@ -1,0 +1,13 @@
+<ul>
+  <h3><%= @business.name %></h3>
+  <li>Address: <%= @business.address%></li>
+  <li>City: <%= @business.city.name %></li>
+  <li>Zipcode: <%= @business.zipcode %></li>
+  <li>Description: <%= @business.description %></li>
+  <li>Phone: <%= @business.phone %></li>
+  <li>Website: <%= @business.website %></li>
+  <li>Category: <%= @business.category.name %></li>
+  <%= image_tag @business.image_url %>
+</ul>
+
+<%#= button_to "See All Businesses", businesses_path %>

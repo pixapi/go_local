@@ -29,6 +29,8 @@ gem 'capybara'
 gem 'launchy'
 gem 'shoulda-matchers'
 gem "factory_girl_rails"
+gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'figaro'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -39,9 +41,12 @@ gem "factory_girl_rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'simplecov', :require => false, :group => :test
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'rspec-rails'
+  gem 'faker'
+  gem 'database_cleaner'
 end
 
 group :development do
