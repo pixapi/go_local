@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :businesses, only: [:index, :show]
   resources :cities, only: [:index, :show]
   resources :categories, only: [:index, :show]
+
+  namespace :admin do
+    resources :categories
+  end
 end
