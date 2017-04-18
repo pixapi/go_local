@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "home#show"
 
-  resources :businesses, only: [:index, :show]
+  # resources :businesses, only: [:index, :show]
+  get '/businesses', to: 'businesses#index'
+  get '/businesses/:id', to: 'businesses#show'
   resources :cities, only: [:index, :show]
   resources :categories, only: [:index, :show]
 

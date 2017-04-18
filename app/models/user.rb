@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # has_secure_password
   # validates
 
-  enum role: %w(default admin)
+  enum role: [:default, :admin]
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
